@@ -1,0 +1,23 @@
+.cta2_container {
+    background-color: $light-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .cta2_heading {
+        position: absolute;
+        top: 3.39875rem;
+        font-size: 58.64px;
+        font-weight: bold;
+        background: $heading-cta2;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}

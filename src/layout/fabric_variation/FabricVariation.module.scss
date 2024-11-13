@@ -1,0 +1,58 @@
+.fabricvariation_container {
+    display: flex;
+    height: 100vh;
+
+    .fabricvariation_left {
+        display: flex;
+        justify-content: center;
+        width: 54.6%;
+
+        img {
+            width: 100%;
+            object-position: center;
+            object-fit: contain;
+        }
+    }
+
+    .fabricvariation_right {
+        display: flex;
+        position: relative;
+        width: 45.4%;
+
+        img {
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .fabrics {
+            display: flex;
+            flex-flow: column;
+            position: absolute;
+            right: 0;
+            width: 14.25rem;
+
+            button {
+                background-color: $light-color;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 10.43px;
+                color: $primary-color;
+                padding-left: .814375rem;
+                height: 3.2575rem;
+            }
+
+            img {
+                width: 6.125rem;
+                height: 98%;
+                object-fit: contain;
+                object-position: right;
+            }
+
+            .fabrics_last {
+                border-bottom-left-radius: 15px;
+            }
+        }
+    }
+}

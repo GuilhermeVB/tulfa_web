@@ -1,0 +1,21 @@
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import './shared';
+
+@import '../components/button/Button.module';
+
+@import '../layout/banner/Banner.module';
+@import '../layout/color_variation/ColorVariation.module';
+@import '../layout/cta_1/CTA1.module';
+@import '../layout/cta_2/CTA2.module';
+@import '../layout/cta_3/CTA3.module';
+@import '../layout/fabric_variation/FabricVariation.module';
+@import '../layout/lifestyle_cta/LifeStyleCta.module';
+@import '../components/showcase/ShowCase.module';
+@import '../layout/silo_images/Silo.module';
+@import '../layout/size_var/SizeVar.module';

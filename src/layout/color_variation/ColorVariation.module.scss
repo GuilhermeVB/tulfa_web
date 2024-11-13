@@ -1,0 +1,79 @@
+.colorvariation_container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+
+    .colorvariation_left {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+        position: relative;
+        width: 50%;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .colorvariation_left_filter {
+            display: flex;
+            gap: .383125rem;
+            position: absolute;
+            bottom: 1.018125rem;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 0.550625rem .47875rem;
+
+            button {
+                display: flex;
+                align-items: end;
+                border-radius: 50%;
+                width: 1.1875rem;
+                height: 1.1875rem;
+
+                div {
+                    width: 100%;
+                    height: 50%;
+                    border-bottom-left-radius: 100px;
+                    border-bottom-right-radius: 100px;
+                }
+            }
+
+            .colorvariation_left_filter_one {
+                background-color: $filter_one;
+
+                .first_semi_circulo {
+                    background-color: $filter_half_one;
+                }
+            }
+
+            .colorvariation_left_filter_two {
+                background-color: $filter_two;
+
+                .second_semi_circulo {
+                    background-color: $filter_half_two;
+                }
+            }
+
+            .colorvariation_left_filter_three {
+                background-color: $filter_three;
+
+                .third_semi_circulo {
+                    background-color: $filter_half_three;
+                }
+            }
+        }
+    }
+
+    .colorvariation_right {
+        background-color: $background-sizevar;
+        display: flex;
+        width: 50%;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            object-position: right;
+        }
+    }
+}

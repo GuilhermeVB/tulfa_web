@@ -1,0 +1,14 @@
+.lifestylecta_container {
+    background: url('../../../public/images/lifestyle_cta/background.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    height: 53.75rem;
+
+
+    .lifestylecta_heading {
+        margin-left: 4.886875rem;
+        font-size: 41.7px;
+        font-weight: bold;
+        color: $light-color;
+    }
+}

@@ -1,0 +1,56 @@
+.sizevar_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    background-color: $background-sizevar;
+    height: 100vh;
+
+    .sizevar_images_large,
+    .sizevar_images_meddium,
+    .sizevar_images_small {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        span {
+            position: relative;
+            font-size: 20.85px;
+            color: $primary-color;
+        }
+    }
+
+    .sizevar_images_large {
+        top: 41.5%;
+
+        span {
+            top: 3rem;
+            left: .6875rem;
+        }
+    }
+
+    .sizevar_images_meddium {
+        span {
+            top: 2.6rem;
+            left: .5625rem;
+        }
+    }
+
+    .sizevar_images_small {
+        top: 57.7%;
+
+        span {
+            top: 2.2rem;
+            left: 1.056875rem;
+        }
+    }
+
+    .sizevar_span {
+        margin-bottom: 2.14125rem;
+        font-size: 10.43px;
+        color: $primary-color;
+    }
+}

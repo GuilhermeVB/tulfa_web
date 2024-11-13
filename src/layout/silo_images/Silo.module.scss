@@ -1,0 +1,28 @@
+.silo_container {
+    background-color: $background-silo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4.125rem 0 8.904375rem;
+    height: 100vh;
+
+    .silo_content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.08625rem;
+
+        .silo_content_heading {
+            font-size: 41.7px;
+            font-weight: bold;
+            background: $indigoblue_to_fieryred;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+
+    .silo_image {
+        align-self: self-end;
+        object-fit: contain;
+        max-height: 90%;
+    }
+}
