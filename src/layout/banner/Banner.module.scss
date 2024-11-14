@@ -1,5 +1,10 @@
 .banner_container {
-    background: url('../../../public/images/banner/background.png') center/cover no-repeat;
     width: 100%;
     height: 100vh;
+
+    .banner_video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }

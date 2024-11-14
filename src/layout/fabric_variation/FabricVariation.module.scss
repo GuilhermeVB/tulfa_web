@@ -5,7 +5,7 @@
     .fabricvariation_left {
         display: flex;
         justify-content: center;
-        width: 54.6%;
+        width: 55.6%;
 
         img {
             width: 100%;
@@ -15,14 +15,16 @@
     }
 
     .fabricvariation_right {
+        overflow: hidden;
         display: flex;
         position: relative;
-        width: 45.4%;
+        width: 44.4%;
 
         img {
             width: 100%;
             object-position: center;
             object-fit: cover;
+            transform: scale(2);
         }
 
         .fabrics {
@@ -40,15 +42,25 @@
                 font-size: 10.43px;
                 color: $primary-color;
                 padding-left: .814375rem;
+                border: 0;
                 height: 3.2575rem;
             }
 
-            img {
+            .fabrics_figure {
+                overflow: hidden;
                 width: 6.125rem;
-                height: 98%;
-                object-fit: contain;
-                object-position: right;
+                height: 96%;
+
+                img {
+                    width: 6.125rem;
+                    height: 96%;
+                    object-fit: contain;
+                    object-position: center;
+                    transform: scale(7);
+                    transform-origin: center 1rem;
+                }
             }
+
 
             .fabrics_last {
                 border-bottom-left-radius: 15px;

@@ -1,12 +1,12 @@
 .colorvariation_container {
+    position: relative;
     display: flex;
     justify-content: center;
     height: 100vh;
-
+    
     .colorvariation_left {
         display: flex;
         justify-content: center;
-        flex: 1;
         position: relative;
         width: 50%;
 
@@ -15,63 +15,65 @@
             object-fit: contain;
         }
 
-        .colorvariation_left_filter {
+    }
+
+    .colorvariation_left_filter {
+        position: absolute;
+        bottom: 1.018125rem;
+        left: 25%;
+        display: flex;
+        gap: .383125rem;
+        transform: translate(-50%);
+        padding: 0.550625rem .47875rem;
+
+        button {
             display: flex;
-            gap: .383125rem;
-            position: absolute;
-            bottom: 1.018125rem;
-            left: 50%;
-            transform: translate(-50%);
-            padding: 0.550625rem .47875rem;
+            align-items: end;
+            border-radius: 50%;
+            width: 1.1875rem;
+            height: 1.1875rem;
 
-            button {
-                display: flex;
-                align-items: end;
-                border-radius: 50%;
-                width: 1.1875rem;
-                height: 1.1875rem;
-
-                div {
-                    width: 100%;
-                    height: 50%;
-                    border-bottom-left-radius: 100px;
-                    border-bottom-right-radius: 100px;
-                }
+            div {
+                width: 100%;
+                height: 50%;
+                border-bottom-left-radius: 100px;
+                border-bottom-right-radius: 100px;
             }
+        }
 
-            .colorvariation_left_filter_one {
-                background-color: $filter_one;
+        .colorvariation_left_filter_one {
+            background-color: $filter_one;
 
-                .first_semi_circulo {
-                    background-color: $filter_half_one;
-                }
+            .first_semi_circulo {
+                background-color: $filter_half_one;
             }
+        }
 
-            .colorvariation_left_filter_two {
-                background-color: $filter_two;
+        .colorvariation_left_filter_two {
+            background-color: $filter_two;
 
-                .second_semi_circulo {
-                    background-color: $filter_half_two;
-                }
+            .second_semi_circulo {
+                background-color: $filter_half_two;
             }
+        }
 
-            .colorvariation_left_filter_three {
-                background-color: $filter_three;
+        .colorvariation_left_filter_three {
+            background-color: $filter_three;
 
-                .third_semi_circulo {
-                    background-color: $filter_half_three;
-                }
+            .third_semi_circulo {
+                background-color: $filter_half_three;
             }
         }
     }
 
     .colorvariation_right {
+        overflow-x: hidden;
         background-color: $background-sizevar;
         display: flex;
         width: 50%;
 
         img {
-            width: 100%;
+            width: 210%;
             object-fit: contain;
             object-position: right;
         }

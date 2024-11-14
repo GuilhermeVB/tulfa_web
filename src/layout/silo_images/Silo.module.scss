@@ -1,5 +1,5 @@
 .silo_container {
-    background-color: $background-silo;
+    background-color: $light-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,8 +21,10 @@
     }
 
     .silo_image {
+        width: 23.4375rem;
+        height: 31.4375rem;
         align-self: self-end;
-        object-fit: contain;
+        object-fit: cover;
         max-height: 90%;
     }
 }

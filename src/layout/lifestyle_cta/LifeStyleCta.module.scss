@@ -1,14 +1,27 @@
 .lifestylecta_container {
-    background: url('../../../public/images/lifestyle_cta/background.png') center/cover no-repeat;
+    position: relative;
+    background: url('../../../public/images/lifestyle_cta/background.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     height: 53.75rem;
 
+    .lifestylecta_filter {
+        position: absolute;
+        background-color: black;
+        opacity: .3;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 
     .lifestylecta_heading {
+        z-index: 1;
+        position: relative;
         margin-left: 4.886875rem;
         font-size: 41.7px;
         font-weight: bold;
         color: $light-color;
     }
+
 }

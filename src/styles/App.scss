@@ -7,6 +7,8 @@
 
 @import './shared';
 
+@import './config/mobile';
+
 @import '../components/button/Button.module';
 
 @import '../layout/banner/Banner.module';
@@ -19,3 +21,7 @@
 @import '../components/showcase/ShowCase.module';
 @import '../layout/silo_images/Silo.module';
 @import '../layout/size_var/SizeVar.module';
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+}

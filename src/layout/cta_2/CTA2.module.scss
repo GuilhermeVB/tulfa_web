@@ -5,12 +5,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 
     .cta2_heading {
         position: absolute;
         top: 3.39875rem;
         font-size: 58.64px;
         font-weight: bold;
+        text-align: center;
         background: $heading-cta2;
         -webkit-background-clip: text;
         color: transparent;

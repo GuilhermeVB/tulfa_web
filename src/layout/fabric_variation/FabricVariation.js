@@ -1,27 +1,33 @@
 export const FabricVariation = () => {
-    const fabricLeft = "./images/fabric_variation/left.png"
-    const fabricRight = "./images/fabric_variation/right.png"
-
-    const fabricsOne = "./images/fabric_variation/fabrics_one.png"
-    const fabricsTwo = "./images/fabric_variation/fabrics_two.png"
-    const fabricsThree = "./images/fabric_variation/fabrics_three.png"
+    const blueSofa = "./images/fabric_variation/blue_sofa.png"
+    const graySofa = "./images/fabric_variation/gray_sofa.png"
+    const violetSofa = "./images/fabric_variation/violet_sofa.png"
 
     return (
         <section className="fabricvariation_container">
             <div className="fabricvariation_left">
-                <img src={fabricLeft} alt="Fabric" />
+                <img src={blueSofa} alt="Fabric" />
             </div>
             <div className="fabricvariation_right">
-                <img src={fabricRight} alt="Fabric" />
+                <img src={blueSofa} alt="Fabric" />
                 <div className="fabrics">
-                    <button>
-                        Prints <img src={fabricsOne} alt="First fabric" />
+                    <button className="fabrics_first">
+                        Prints
+                        <div className="fabrics_figure">
+                            <img src={blueSofa} alt="First fabric" />
+                        </div>
                     </button>
                     <button>
-                        Leathers <img src={fabricsTwo} alt="Second fabric" />
+                        Leathers
+                        <div className="fabrics_figure">
+                            <img src={graySofa} alt="Second fabric" />
+                        </div>
                     </button>
                     <button className="fabrics_last">
-                        Embroidery <img src={fabricsThree} alt="Three fabric" />
+                        Embroidery
+                        <div className="fabrics_figure">
+                            <img src={violetSofa} alt="Three fabric" />
+                        </div>
                     </button>
                 </div>
             </div>
