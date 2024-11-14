@@ -44,6 +44,10 @@
                 padding-left: .814375rem;
                 border: 0;
                 height: 3.2575rem;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
 
             .fabrics_figure {

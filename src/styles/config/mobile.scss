@@ -1,4 +1,4 @@
-@media (max-width: 500px) {
+@media (max-width: 620px) {
 
     /* CTA1 */
 
@@ -128,6 +128,11 @@
 
         .colorvariation_left_filter {
             left: 50% !important;
+
+            button {
+                width: 23px !important;
+                height: 23px !important;
+            }
         }
 
         .colorvariation_right {

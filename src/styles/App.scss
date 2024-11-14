@@ -7,6 +7,8 @@
 
 @import './shared';
 
+@import './config/fit';
+@import './config/laptop';
 @import './config/mobile';
 
 @import '../components/button/Button.module';

@@ -7,4 +7,11 @@
     font-size: 7.82px;
     font-weight: bold;
     color: $primary-color;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $primary-color;
+        color: $light-color;
+    }
 }

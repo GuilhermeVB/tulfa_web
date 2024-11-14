@@ -1,0 +1,191 @@
+@media (min-width: 1000px) {
+    /* CTA1 */
+
+    .cta1_heading {
+        font-size: 8rem !important;
+    }
+
+    /* CTA2 */
+
+    .cta2_container {
+        height: auto !important;
+
+        .cta2_heading {
+            font-size: 90px !important;
+        }
+    }
+
+    /* CTA3 */
+
+    .cta3_container {
+        padding: 6.25rem 16.8125rem !important;
+
+        .cta3_paragraph {
+            font-size: 86px !important;
+            max-width: none !important;
+            width: 46.375rem !important;
+        }
+    }
+
+    /* SILO */
+
+    .silo_container {
+
+        .silo_content {
+            gap: 1.666875rem !important;
+
+            .silo_content_heading {
+                font-size: 64px !important;
+            }
+        }
+
+        .silo_image {
+            width: 40.375rem !important;
+            height: 48.4375rem !important;
+            object-fit: contain !important;
+        }
+    }
+
+    /* SIZE VAR */
+
+    .sizevar_container {
+        .sizevar_images_large {
+
+            span {
+                top: 4.8rem !important;
+                left: .8rem !important;
+            }
+
+            img {
+                width: 57.75rem !important;
+            }
+        }
+
+        .sizevar_images_meddium {
+
+            span {
+                top: 4.3rem !important;
+                left: .8rem !important;
+            }
+
+            img {
+                width: 50.525rem !important;
+            }
+        }
+
+        .sizevar_images_small {
+
+            span {
+                top: 3.5rem !important;
+                left: 1.5rem !important;
+            }
+
+            img {
+                width: 44.72625rem !important;
+            }
+        }
+
+        .sizevar_images_span {
+            font-size: 32px !important;
+        }
+
+        .sizevar_span {
+            font-size: 16px !important;
+            margin-bottom: 3.25rem !important;
+        }
+    }
+
+    /* COLOR VARIATION */
+
+    .colorvariation_container {
+        .colorvariation_left_filter {
+            gap: .5875rem !important;
+            bottom: 1.5625rem !important;
+
+            button {
+                width: 26px !important;
+                height: 26px !important;
+            }
+        }
+    }
+
+    /* FABRIC VARIATION */
+
+    .fabricvariation_container {
+        .fabrics {
+            width: 21.875rem !important;
+
+            button {
+                font-size: 16px !important;
+                height: 5rem !important;
+                padding-left: 1.25rem !important;
+            }
+
+            .fabrics_figure {
+                width: 9.375rem !important;
+                height: 98% !important;
+
+                img {
+                    transform-origin: center 1.5rem !important;
+                }
+            }
+        }
+    }
+
+    /* LIFE STYLE */
+
+    .lifestylecta_container {
+        height: 82.5rem !important;
+
+        .lifestylecta_heading {
+            font-size: 64px !important;
+            margin-left: 7.5rem;
+        }
+    }
+
+
+    /* BUTTON */
+
+    .button_container {
+        font-size: 12px !important;
+        padding: .916875rem 1.875rem !important;
+        max-width: max-content !important;
+        border-width: 2px !important;
+    }
+
+    /* SHOWCASE */
+
+    .content {
+        height: 25rem !important;
+
+        .content_text {
+            max-width: none !important;
+        }
+
+        &:first-child {
+            font-size: 64px !important;
+        }
+
+        &:last-child {
+            font-size: 26px !important;
+            max-width: 60.1875rem !important;
+        }
+    }
+
+    .closeup {
+        height: 82.5rem !important;
+    }
+
+    .installations,
+    .dimension {
+        height: 52rem !important;
+    }
+
+    .flatlay {
+        height: 53.333125rem !important;
+    }
+
+    .short_paragraph {
+        width: 49.8125rem !important;
+    }
+}

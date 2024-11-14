@@ -33,6 +33,10 @@
             width: 1.1875rem;
             height: 1.1875rem;
 
+            &:hover {
+                cursor: pointer;
+            }
+
             div {
                 width: 100%;
                 height: 50%;
