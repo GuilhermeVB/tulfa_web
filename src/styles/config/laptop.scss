@@ -147,10 +147,16 @@
     /* BUTTON */
 
     .button_container {
+        gap: .833125rem !important;
         font-size: 12px !important;
         padding: .916875rem 1.875rem !important;
         max-width: max-content !important;
         border-width: 2px !important;
+
+        .button_icon {
+            width: 17px !important;
+            height: 17px !important;
+        }
     }
 
     /* SHOWCASE */

@@ -1,0 +1,104 @@
+.siloopen_container {
+    background-color: $background-silo;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 87.4%;
+    border-radius: 33.33px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, .25);
+
+    .siloopen_icon {
+        width: 36px;
+        height: 36px;
+        align-self: flex-end;
+        margin-right: 4.16625rem;
+        color: $primary-color;
+    }
+
+    .siloopen_content {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 2.291875rem;
+
+        .siloopen_content_heading {
+            width: 39.166875rem;
+            font-size: 32px;
+            font-weight: 500;
+            background: $silo-heading;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .siloopen_content_carousel {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            display: flex;
+            width: 43.35625rem;
+            height: 25rem;
+            gap: .8125rem;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .siloopen_content_carousel_element {
+                overflow: hidden;
+                flex-shrink: 0;
+                background-color: $light-color;
+                border-radius: 20px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .short_element {
+                width: 21.25rem;
+                height: 25rem;
+            }
+
+            .large_element {
+                width: 43.333125rem;
+                height: 100%;
+            }
+
+            .first_image {
+                transform: scale(1.8);
+            }
+
+            .second_image {
+                transform: scale(2.5);
+                transform-origin: 50% 31%;
+            }
+
+            .third_image {
+                transform: scale(1.16);
+            }
+
+            .fourth_image {
+                transform: scale(1.8);
+            }
+
+            .fifth_image {
+                transform: scale(2.1);
+                transform-origin: 50% 92%;
+            }
+
+            .sixth_image {
+                transform: scale(1.6);
+                transform-origin: 50% 65%;
+            }
+        }
+    }
+}

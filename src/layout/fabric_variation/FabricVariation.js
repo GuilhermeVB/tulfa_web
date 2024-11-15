@@ -1,32 +1,45 @@
+import { useEffect, useState } from "react"
+
 export const FabricVariation = () => {
-    const blueSofa = "./images/fabric_variation/blue_sofa.png"
-    const graySofa = "./images/fabric_variation/gray_sofa.png"
-    const violetSofa = "./images/fabric_variation/violet_sofa.png"
+    const [currentFabric, setCurrentFabric] = useState([])
+    const [selectedFabric, setSelectedFabric] = useState(0)
+
+    useEffect(() => {
+        setCurrentFabric([
+            "./images/fabric_variation/blue_sofa.png",
+            "./images/fabric_variation/gray_sofa.png",
+            "./images/fabric_variation/violet_sofa.png"
+        ])
+    }, [])
+
+    function changeFabric(index) {
+        setSelectedFabric(index)
+    }
 
     return (
         <section className="fabricvariation_container">
             <div className="fabricvariation_left">
-                <img src={blueSofa} alt="Fabric" />
+                <img src={currentFabric[selectedFabric]} alt="Fabric" />
             </div>
             <div className="fabricvariation_right">
-                <img src={blueSofa} alt="Fabric" />
+                <img src={currentFabric[selectedFabric]} alt="Fabric" />
                 <div className="fabrics">
-                    <button className="fabrics_first">
+                    <button className="fabrics_first" onClick={() => { changeFabric(0) }}>
                         Prints
                         <div className="fabrics_figure">
-                            <img src={blueSofa} alt="First fabric" />
+                            <img src={currentFabric[0]} alt="First fabric" />
                         </div>
                     </button>
-                    <button>
+                    <button onClick={() => { changeFabric(1) }}>
                         Leathers
                         <div className="fabrics_figure">
-                            <img src={graySofa} alt="Second fabric" />
+                            <img src={currentFabric[1]} alt="Second fabric" />
                         </div>
                     </button>
-                    <button className="fabrics_last">
+                    <button className="fabrics_last" onClick={() => { changeFabric(2) }}>
                         Embroidery
                         <div className="fabrics_figure">
-                            <img src={violetSofa} alt="Three fabric" />
+                            <img src={currentFabric[2]} alt="Three fabric" />
                         </div>
                     </button>
                 </div>

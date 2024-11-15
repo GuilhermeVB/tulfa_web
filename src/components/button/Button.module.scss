@@ -1,4 +1,7 @@
 .button_container {
+    display: flex;
+    align-items: center;
+    gap: .515rem;
     background-color: transparent;
     border: 1px solid $primary-color;
     border-radius: 43.44px;
@@ -13,5 +16,16 @@
         cursor: pointer;
         background-color: $primary-color;
         color: $light-color;
+        
+        .button_icon {
+            color: $light-color;
+        }
+    }
+
+    .button_icon {
+        width: 11px;
+        height: 11px;
+        color: $primary-color;
+        transition: .3s ease-in-out;
     }
 }

@@ -1,12 +1,58 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger)
+
 export const CTA2 = () => {
-    const sofa = "/images/cta_2/sofa.png"
+    const containerRef = useRef(null)
+    const headingRef = useRef(null)
+    const imageRef = useRef(null)
+
+
+    useGSAP(() => {
+        const container = containerRef.current
+        const heading = headingRef.current
+        const image = imageRef.current
+
+        const scroll = gsap.timeline({
+            scrollTrigger: {
+                trigger: container,
+                toggleActions: 'play none none reverse',
+                start: 'center 75%',
+                end: 'center 75%',
+                markers: true
+            }
+        })
+
+        scroll
+            .fromTo(heading, {
+                opacity: 0,
+                y: '100vh',
+            }, {
+                duration: 1.5,
+                opacity: 1,
+                y: '0vh',
+                ease: 'expo.out(1)'
+            })
+            .fromTo(image, {
+                opacity: 0,
+                y: '100vh',
+            }, {
+                duration: 1.5,
+                opacity: 1,
+                y: '0vh',
+                ease: 'expo.out(1)'
+            })
+    })
 
     return (
-        <section className="cta2_container">
-            <h2 className="cta2_heading">
+        <section ref={containerRef} className="cta2_container">
+            <h2 ref={headingRef} className="cta2_heading">
                 Virtual Product Photography
             </h2>
-            <img src={sofa} alt="Sofa" />
+            <img ref={imageRef} src="/images/cta_2/sofa.png" alt="Sofa" />
         </section>
     );
 }

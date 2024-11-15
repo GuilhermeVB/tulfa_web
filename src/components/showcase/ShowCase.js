@@ -1,7 +1,9 @@
-export const ShowCase = ({ heading, asset, video, paragraph, section, shortParagraph }) => {
+import { LuExpand } from "react-icons/lu";
 
+export const ShowCase = ({ heading, asset, video, paragraph, section, shortParagraph, closeUp, buttonClick, children }) => {
     return (
         <section className="showcase_container">
+            {children}
             <div className="content">
                 <h4 className="content_text">
                     {heading}
@@ -13,7 +15,19 @@ export const ShowCase = ({ heading, asset, video, paragraph, section, shortParag
                         <source src={asset} type="video/mp4" />
                     </video>
                 ) : (
-                    <img className={`hero_shot ${section}`} src={asset} alt="Hero shot" />
+                    <>
+                        <img className={`hero_shot ${section}`} src={asset} alt="Hero shot" />
+                        {
+                            closeUp && (
+                                <button className="closer_look" onClick={buttonClick}>
+                                    Take a closer look
+                                    <div className="closer_look_icon_container">
+                                        <LuExpand className="closer_look_icon" />
+                                    </div>
+                                </button>
+                            )
+                        }
+                    </>
                 )
             }
             <div className="content">

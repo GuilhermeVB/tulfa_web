@@ -1,4 +1,7 @@
 .cta1_container {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
     background-color: $light-color;
     display: flex;
     justify-content: center;

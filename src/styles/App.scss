@@ -12,6 +12,9 @@
 @import './config/mobile';
 
 @import '../components/button/Button.module';
+@import '../components/closeup_open/CloseUpOpen.module';
+@import '../components/showcase/ShowCase.module';
+@import '../components/silo_open/SiloOpen.module';
 
 @import '../layout/banner/Banner.module';
 @import '../layout/color_variation/ColorVariation.module';
@@ -20,10 +23,19 @@
 @import '../layout/cta_3/CTA3.module';
 @import '../layout/fabric_variation/FabricVariation.module';
 @import '../layout/lifestyle_cta/LifeStyleCta.module';
-@import '../components/showcase/ShowCase.module';
 @import '../layout/silo_images/Silo.module';
 @import '../layout/size_var/SizeVar.module';
 
 body {
+    overflow-x: hidden;
+    position: relative;
     font-family: 'SF Pro Display', sans-serif;
+}
+
+.App {
+    height: fit-content;
+}
+
+.introdution {
+    position: relative;
 }

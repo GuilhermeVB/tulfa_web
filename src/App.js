@@ -15,19 +15,23 @@ import { SizeVar } from "./layout/size_var/SizeVar";
 export const App = () => {
   return (
     <div className="App">
-      <Banner />
-      <CTA1 />
+      <div className="introdution">
+        <Banner />
+        <CTA1 />
+      </div>
       <CTA2 />
       <CTA3 />
       <Silo />
-      <SizeVar />
-      <ColorVariation />
-      <FabricVariation />
-      <LifeStyleCta />
-      <CloseUpShots />
-      <InstallationsImages />
-      <DimensionImages />
-      <FlatLay />
+      <div className="slash">
+        <SizeVar />
+        <ColorVariation />
+        <FabricVariation />
+        <LifeStyleCta />
+        <CloseUpShots />
+        <InstallationsImages />
+        <DimensionImages />
+        <FlatLay />
+      </div>
     </div>
   );
 }

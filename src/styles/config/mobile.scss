@@ -10,6 +10,7 @@
 
     .cta2_container {
         overflow-x: hidden;
+        height: 100vh;
 
         .cta2_heading {
             font-size: 3.125rem !important;
@@ -220,10 +221,16 @@
     /* BUTTON */
 
     .button_container {
+        gap: .735rem !important;
         font-size: 10.62px !important;
         max-width: max-content !important;
         padding: 12.68px 26.55px !important;
         border-width: 2px !important;
+
+        .button_icon {
+            width: 15px !important;
+            height: 15px !important;
+        }
     }
 
     /* SHOWCASE */

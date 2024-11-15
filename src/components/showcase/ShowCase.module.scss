@@ -1,4 +1,6 @@
 .showcase_container {
+    background-color: $light-color;
+    position: relative;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -39,6 +41,7 @@
 /* Sections */
 
 .closeup {
+    position: relative;
     height: 53.75rem;
 }
 
@@ -52,4 +55,37 @@
 
 .short_paragraph {
     width: 32.4375rem;
+}
+
+/* Dinamic */
+
+.closer_look {
+    position: absolute;
+    top: 78%;
+    background-color: $background-closer-look;
+    padding: .520625rem .833125rem;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    border-radius: 133.33px;
+    
+    font-size: 13.33px;
+    font-weight: 600;
+    color: $light-color;
+
+    .closer_look_icon_container {
+        background-color: $background-icon-closer-look;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33px;
+        height: 33px;
+        border-radius: 20px;
+
+        .closer_look_icon {
+            width: 17px;
+            height: 17px;
+            color: $light-color;
+        }
+    }
 }
