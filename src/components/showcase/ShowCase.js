@@ -1,11 +1,12 @@
 import { LuExpand } from "react-icons/lu";
+import { Carousel } from "../carousel/Carousel";
 
-export const ShowCase = ({ heading, asset, video, paragraph, section, shortParagraph, closeUp, buttonClick, children }) => {
+export const ShowCase = ({ heading, asset, video, paragraph, section, shortParagraph, closeUp, buttonClick, children, carousel }) => {
     return (
         <section className="showcase_container">
             {children}
             <div className="content">
-                <h4 className="content_text">
+                <h4 className="content_text content_heading">
                     {heading}
                 </h4>
             </div>
@@ -16,7 +17,12 @@ export const ShowCase = ({ heading, asset, video, paragraph, section, shortParag
                     </video>
                 ) : (
                     <>
-                        <img className={`hero_shot ${section}`} src={asset} alt="Hero shot" />
+                        {
+                            carousel ? (
+                                <Carousel array={carousel} section={section} />
+                            ) :
+                                <img className={`hero_shot ${section}`} src={asset} alt="Hero shot" />
+                        }
                         {
                             closeUp && (
                                 <button className="closer_look" onClick={buttonClick}>
