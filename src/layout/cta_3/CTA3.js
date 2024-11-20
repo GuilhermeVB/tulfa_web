@@ -38,16 +38,16 @@ export const CTA3 = ({ refs }) => {
         })
 
         scroll1
-            .fromTo(span1, { opacity: 1 }, { opacity: .6 })
-            .fromTo(span2, { opacity: .6 }, { opacity: 1 })
+            .to(span1, { opacity: .6 })
+            .to(span2, { opacity: 1 })
 
         scroll2
-            .fromTo(span2, { opacity: 1 }, { opacity: .6 })
-            .fromTo(span3, { opacity: .6 }, { opacity: 1 })
+            .to(span2, { opacity: .6 })
+            .to(span3, { opacity: 1 })
 
         scroll3
-            .fromTo(span3, { opacity: 1 }, { opacity: .6 })
-            .fromTo(span4, { opacity: .6 }, { opacity: 1 })
+            .to(span3, { opacity: .6 })
+            .to(span4, { opacity: 1 })
     })
 
     return (

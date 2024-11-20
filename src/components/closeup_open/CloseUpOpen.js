@@ -1,6 +1,17 @@
 import { IoClose } from "react-icons/io5";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 export const CloseUpOpen = ({ vetorImages, close }) => {
+
+    useGSAP(() => {
+        gsap.timeline()
+            .from('.closeupopen_container',
+                { y: '100vh', duration: 1, ease: 'power2.out' }
+            )
+    })
+
     const bannerOpen = "/images/showcase/closeup_open/banner.jpg"
 
     return (

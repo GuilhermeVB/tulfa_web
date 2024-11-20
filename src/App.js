@@ -31,9 +31,6 @@ export const App = () => {
     useRef(null),
     useRef(null),
     useRef(null),
-    useRef(null),
-    useRef(null),
-    useRef(null),
     useRef(null)
   ];
 
@@ -50,11 +47,7 @@ export const App = () => {
     0,
     0,
     0,
-    0,
-    0,
-    0,
-    0,
-    0,
+    300,
     0,
   ];
 
@@ -153,31 +146,29 @@ export const App = () => {
       <div ref={sectionRefs[3]}>
         <Silo />
       </div>
-      <div className="slash">
-        <div ref={sectionRefs[4]}>
-          <SizeVar />
-        </div>
-        <div ref={sectionRefs[5]}>
-          <ColorVariation />
-        </div>
-        <div ref={sectionRefs[6]}>
-          <FabricVariation />
-        </div>
-        <div ref={sectionRefs[7]}>
-          <LifeStyleCta />
-        </div>
-        <div ref={sectionRefs[8]}>
-          <CloseUpShots />
-        </div>
-        <div ref={sectionRefs[9]}>
-          <InstallationsImages />
-        </div>
-        <div ref={sectionRefs[10]}>
-          <DimensionImages />
-        </div>
-        <div ref={sectionRefs[11]}>
-          <FlatLay />
-        </div>
+      <div ref={sectionRefs[4]}>
+        <SizeVar />
+      </div>
+      <div ref={sectionRefs[5]}>
+        <ColorVariation />
+      </div>
+      <div ref={sectionRefs[6]}>
+        <FabricVariation />
+      </div>
+      <div ref={sectionRefs[7]}>
+        <LifeStyleCta />
+      </div>
+      <div ref={sectionRefs[8]}>
+        <CloseUpShots />
+      </div>
+      <div>
+        <InstallationsImages />
+      </div>
+      <div>
+        <DimensionImages />
+      </div>
+      <div>
+        <FlatLay />
       </div>
     </div>
   );

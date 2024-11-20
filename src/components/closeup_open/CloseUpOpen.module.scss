@@ -1,6 +1,7 @@
 .closeupopen_container {
+    overflow-y: scroll;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: $light-color;
@@ -48,6 +49,7 @@
                     border-radius: 50%;
                     width: 36px;
                     height: 36px;
+                    cursor: pointer;
 
                     .closeupopen_content_banner_icon {
                         color: $light-color;

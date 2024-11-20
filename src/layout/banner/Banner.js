@@ -1,9 +1,16 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
 
 export const Banner = () => {
+
+    useGSAP(() => {
+        gsap.timeline()
+            .fromTo('.cta1_container',
+                { opacity: 0, scale: 20 },
+                { delay: 2, duration: 1, opacity: 1, scale: 1 }
+            )
+    })
+
     return (
         <section className="banner_container">
             <video className="banner_video" autoPlay muted loop>
