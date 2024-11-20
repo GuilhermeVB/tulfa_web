@@ -52,7 +52,7 @@ export const CTA2 = () => {
             <h2 ref={headingRef} className="cta2_heading">
                 Virtual Product Photography
             </h2>
-            <img ref={imageRef} src="/images/cta_2/sofa.png" alt="Sofa" />
+            <img ref={imageRef} src="/images/cta_2/sofa.jpg" alt="Sofa" />
         </section>
     );
 }
