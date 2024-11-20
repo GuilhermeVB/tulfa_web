@@ -21,6 +21,7 @@ import { SizeVar } from "./layout/size_var/SizeVar";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export const App = () => {
+  const scrollingRef = useRef(false);
   const sectionRefs = [
     useRef(null),
     useRef(null),
@@ -36,34 +37,74 @@ export const App = () => {
     useRef(null)
   ];
 
+  const cta3SpanRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  const offsets = [
+    0,
+    -155,
+    -500,
+    -361,
+    -201,
+    -420,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+  ];
+
+  let activeIndex = 0;
+
   useGSAP(() => {
-    const sections = sectionRefs.map((ref) => ref.current);
-    let isScrolling = false;
+    const sections = [
+      sectionRefs[0].current,
+      sectionRefs[1].current,
+      ...cta3SpanRefs.map((ref) => ref.current),
+      ...sectionRefs.slice(3).map((ref) => ref.current),
+    ];
 
     const scrollToSection = (index) => {
-      if (isScrolling) return;
-      isScrolling = true;
+      if (scrollingRef.current) return;
+      scrollingRef.current = true;
 
       if (index < 0 || index >= sections.length) {
-        isScrolling = false;
+        scrollingRef.current = false;
         return;
       }
 
+      const offset = offsets[index] || 0;
+
       gsap.to(window, {
         scrollTo: {
-          y: sections[index],
+          y: sections[index].offsetTop + offset,
           autoKill: false,
         },
         duration: 1,
         ease: "power2.out",
         onComplete: () => {
-          isScrolling = false;
+          scrollingRef.current = false
+          activeIndex = index
         },
+      });
+
+      sections.forEach((section, i) => {
+        if (i === activeIndex) {
+          section.classList.add("active");
+        } else {
+          section.classList.remove("active");
+        }
       });
     };
 
     window.addEventListener("wheel", (event) => {
-      const currentIndex = sections.findIndex((section) => section === document.querySelector(".active"));
+      if (scrollingRef.current) return;
+
+      const currentIndex = activeIndex;
 
       if (event.deltaY > 0) {
         if (currentIndex < sections.length - 1) {
@@ -76,14 +117,22 @@ export const App = () => {
       }
     });
 
-    sections.forEach((section) => {
+    sections.forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top center",
         end: "bottom center",
-        onEnter: () => section.classList.add("active"),
+        onEnter: () => {
+          if (index === activeIndex) return;
+          section.classList.add("active");
+          activeIndex = index;
+        },
         onLeave: () => section.classList.remove("active"),
-        onEnterBack: () => section.classList.add("active"),
+        onEnterBack: () => {
+          if (index === activeIndex) return;
+          section.classList.add("active");
+          activeIndex = index;
+        },
         onLeaveBack: () => section.classList.remove("active"),
       });
     });
@@ -99,7 +148,7 @@ export const App = () => {
         <CTA2 />
       </div>
       <div ref={sectionRefs[2]}>
-        <CTA3 />
+        <CTA3 refs={cta3SpanRefs} />
       </div>
       <div ref={sectionRefs[3]}>
         <Silo />

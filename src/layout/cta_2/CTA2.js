@@ -19,9 +19,9 @@ export const CTA2 = () => {
         const scroll = gsap.timeline({
             scrollTrigger: {
                 trigger: container,
-                toggleActions: 'play none none reverse',
-                start: 'center 75%',
-                end: 'center 75%',
+                start: "top bottom",
+                end: "bottom top",
+                toggleActions: "play none none reverse",
                 markers: true
             }
         })

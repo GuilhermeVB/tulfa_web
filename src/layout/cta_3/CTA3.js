@@ -1,37 +1,29 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const CTA3 = () => {
-    const span1Ref = useRef(null)
-    const span2Ref = useRef(null)
-    const span3Ref = useRef(null)
-    const span4Ref = useRef(null)
+export const CTA3 = ({ refs }) => {
 
     useGSAP(() => {
-        const span1 = span1Ref.current
-        const span2 = span2Ref.current
-        const span3 = span3Ref.current
-        const span4 = span4Ref.current
+        const [span1, span2, span3, span4] = refs.map((ref) => ref.current);
 
         const scroll1 = gsap.timeline({
             scrollTrigger: {
-                trigger: span2,
+                trigger: span3,
                 toggleActions: 'play none none reverse',
-                start: 'center 75%',
-                end: 'center 75%',
+                start: 'start bottom',
+                end: 'bottom top',
                 markers: true
             }
         })
         const scroll2 = gsap.timeline({
             scrollTrigger: {
-                trigger: span3,
+                trigger: span4,
                 toggleActions: 'play none none reverse',
-                start: 'center 75%',
-                end: 'center 75%',
+                start: 'start bottom',
+                end: 'bottom top',
                 markers: true
             }
         })
@@ -39,45 +31,33 @@ export const CTA3 = () => {
             scrollTrigger: {
                 trigger: span4,
                 toggleActions: 'play none none reverse',
-                start: 'center 75%',
-                end: 'center 75%',
+                start: 'bottom bottom',
+                end: 'bottom top',
                 markers: true
             }
         })
 
         scroll1
-            .fromTo(span1, {
-                opacity: 1
-            }, {
+            .to(span1, {
                 opacity: .6
             })
-            .fromTo(span2, {
-                opacity: .6
-            }, {
+            .to(span2, {
                 opacity: 1
             })
 
         scroll2
-            .fromTo(span2, {
-                opacity: 1
-            }, {
+            .to(span2, {
                 opacity: .6
             })
-            .fromTo(span3, {
-                opacity: .6
-            }, {
+            .to(span3, {
                 opacity: 1
             })
 
         scroll3
-            .fromTo(span3, {
-                opacity: 1
-            }, {
+            .to(span3, {
                 opacity: .6
             })
-            .fromTo(span4, {
-                opacity: .6
-            }, {
+            .to(span4, {
                 opacity: 1
             })
     })
@@ -85,10 +65,10 @@ export const CTA3 = () => {
     return (
         <section className="cta3_container">
             <p className="cta3_paragraph">
-                <span ref={span1Ref} style={{ opacity: 1 }}>Lorem ipsum dolor sit amet. </span>
-                <span ref={span2Ref} style={{ opacity: .6 }}>Quo odit atque ut architecto obcaecati rem vitae tempore </span>
-                <span ref={span3Ref} style={{ opacity: .6 }}>non asperiores consequatur ut error facilis est architecto </span>
-                <span ref={span4Ref} style={{ opacity: .6 }}>doloribus eos laborum praesentium! </span>
+                <span ref={refs[0]} style={{ opacity: 1 }}>Lorem ipsum dolor sit amet. </span>
+                <span ref={refs[1]} style={{ opacity: .6 }}>Quo odit atque ut architecto obcaecati rem vitae tempore </span>
+                <span ref={refs[2]} style={{ opacity: .6 }}>non asperiores consequatur ut error facilis est architecto </span>
+                <span ref={refs[3]} style={{ opacity: .6 }}>doloribus eos laborum praesentium! </span>
             </p>
         </section>
     );
