@@ -38,37 +38,25 @@ export const CTA3 = ({ refs }) => {
         })
 
         scroll1
-            .to(span1, {
-                opacity: .6
-            })
-            .to(span2, {
-                opacity: 1
-            })
+            .fromTo(span1, { opacity: 1 }, { opacity: .6 })
+            .fromTo(span2, { opacity: .6 }, { opacity: 1 })
 
         scroll2
-            .to(span2, {
-                opacity: .6
-            })
-            .to(span3, {
-                opacity: 1
-            })
+            .fromTo(span2, { opacity: 1 }, { opacity: .6 })
+            .fromTo(span3, { opacity: .6 }, { opacity: 1 })
 
         scroll3
-            .to(span3, {
-                opacity: .6
-            })
-            .to(span4, {
-                opacity: 1
-            })
+            .fromTo(span3, { opacity: 1 }, { opacity: .6 })
+            .fromTo(span4, { opacity: .6 }, { opacity: 1 })
     })
 
     return (
         <section className="cta3_container">
             <p className="cta3_paragraph">
-                <span ref={refs[0]} style={{ opacity: 1 }}>Lorem ipsum dolor sit amet. </span>
-                <span ref={refs[1]} style={{ opacity: .6 }}>Quo odit atque ut architecto obcaecati rem vitae tempore </span>
-                <span ref={refs[2]} style={{ opacity: .6 }}>non asperiores consequatur ut error facilis est architecto </span>
-                <span ref={refs[3]} style={{ opacity: .6 }}>doloribus eos laborum praesentium! </span>
+                <span ref={refs[0]} style={{opacity: 1}} >Lorem ipsum dolor sit amet. </span>
+                <span ref={refs[1]} style={{opacity: .6}} >Quo odit atque ut architecto obcaecati rem vitae tempore </span>
+                <span ref={refs[2]} style={{opacity: .6}} >non asperiores consequatur ut error facilis est architecto </span>
+                <span ref={refs[3]} style={{opacity: .6}} >doloribus eos laborum praesentium! </span>
             </p>
         </section>
     );
