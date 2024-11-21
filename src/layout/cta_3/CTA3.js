@@ -14,8 +14,7 @@ export const CTA3 = ({ refs }) => {
                 trigger: span3,
                 toggleActions: 'play none none reverse',
                 start: 'start bottom',
-                end: 'bottom top',
-                markers: true
+                end: 'bottom top'
             }
         })
         const scroll2 = gsap.timeline({
@@ -23,8 +22,7 @@ export const CTA3 = ({ refs }) => {
                 trigger: span4,
                 toggleActions: 'play none none reverse',
                 start: 'start bottom',
-                end: 'bottom top',
-                markers: true
+                end: 'bottom top'
             }
         })
         const scroll3 = gsap.timeline({
@@ -32,8 +30,7 @@ export const CTA3 = ({ refs }) => {
                 trigger: span4,
                 toggleActions: 'play none none reverse',
                 start: 'bottom bottom',
-                end: 'bottom top',
-                markers: true
+                end: 'bottom top'
             }
         })
 

@@ -39,7 +39,7 @@ export const App = () => {
 
   const offsets = [
     0,
-    -890,
+    -1500,
     -155,
     -500,
     -361,
@@ -140,7 +140,7 @@ export const App = () => {
         <Banner />
         <CTA1 />
       </div>
-      <div ref={sectionRefs[1]} style={{height: '10px'}} />
+      <div ref={sectionRefs[1]} style={{height: '1px'}} />
       <div ref={sectionRefs[2]}>
         <CTA2 />
       </div>

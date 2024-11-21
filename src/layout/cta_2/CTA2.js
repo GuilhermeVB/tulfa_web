@@ -21,8 +21,7 @@ export const CTA2 = () => {
                 trigger: container,
                 start: "top bottom",
                 end: "bottom top",
-                toggleActions: "play none none reverse",
-                markers: true
+                toggleActions: "play none none reverse"
             }
         })
 
