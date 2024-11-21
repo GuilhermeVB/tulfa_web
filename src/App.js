@@ -31,6 +31,7 @@ export const App = () => {
     useRef(null),
     useRef(null),
     useRef(null),
+    useRef(null),
     useRef(null)
   ];
 
@@ -38,6 +39,7 @@ export const App = () => {
 
   const offsets = [
     0,
+    -890,
     -155,
     -500,
     -361,
@@ -57,8 +59,9 @@ export const App = () => {
     const sections = [
       sectionRefs[0].current,
       sectionRefs[1].current,
+      sectionRefs[2].current,
       ...cta3SpanRefs.map((ref) => ref.current),
-      ...sectionRefs.slice(3).map((ref) => ref.current),
+      ...sectionRefs.slice(4).map((ref) => ref.current),
     ];
 
     const scrollToSection = (index) => {
@@ -137,28 +140,29 @@ export const App = () => {
         <Banner />
         <CTA1 />
       </div>
-      <div ref={sectionRefs[1]}>
+      <div ref={sectionRefs[1]} style={{height: '10px'}} />
+      <div ref={sectionRefs[2]}>
         <CTA2 />
       </div>
-      <div ref={sectionRefs[2]}>
+      <div ref={sectionRefs[3]}>
         <CTA3 refs={cta3SpanRefs} />
       </div>
-      <div ref={sectionRefs[3]}>
+      <div ref={sectionRefs[4]}>
         <Silo />
       </div>
-      <div ref={sectionRefs[4]}>
+      <div ref={sectionRefs[5]}>
         <SizeVar />
       </div>
-      <div ref={sectionRefs[5]}>
+      <div ref={sectionRefs[6]}>
         <ColorVariation />
       </div>
-      <div ref={sectionRefs[6]}>
+      <div ref={sectionRefs[7]}>
         <FabricVariation />
       </div>
-      <div ref={sectionRefs[7]}>
+      <div ref={sectionRefs[8]}>
         <LifeStyleCta />
       </div>
-      <div ref={sectionRefs[8]}>
+      <div ref={sectionRefs[9]}>
         <CloseUpShots />
       </div>
       <div>
